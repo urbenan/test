@@ -6,7 +6,7 @@
 
 <script>
 
-getText = function(url, callback) // How can I use this callback?
+function getText(url, callback) // How can I use this callback?
 {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function()
@@ -24,14 +24,10 @@ getText = function(url, callback) // How can I use this callback?
 //   alert(data);
 // }
 
-
-
-
-
 function mycallback(data){
   var outerText = data;
-  outerText=outerText.split('\r\n');
-  document.getElementById("demo").innerHTML=outerText[0];
+  outerText=outerText.split("\n");
+  document.getElementById("demo").innerHTML=outerText[1];
 }
 
 window.onload = function () {
